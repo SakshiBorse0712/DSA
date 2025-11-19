@@ -5,17 +5,20 @@ int binarySearch(int a[100],int n,int k)
     int start=0,end=n-1;
     int mid =( start + end )/2;
 
-    if(a[mid] == k)
-    {
-        return mid ;
-    }
-    else if (a[mid] < k)
-    {
-        start = mid +1;
-    }
-    else 
-    {
-        end = mid -1;
+    while(start < end)
+    { 
+        if(a[mid] == k)
+        {
+            return mid ;
+        }
+        else if (a[mid] < k)
+        {
+            start = mid +1;
+        }
+        else 
+        {
+            end = mid -1;
+        }
     }
     
 }
